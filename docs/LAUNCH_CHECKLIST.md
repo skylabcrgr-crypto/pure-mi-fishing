@@ -1,25 +1,40 @@
 # Pure MI Fishing — Launch & Testing Checklist
 
-> **Status:** Backend = **Supabase Free only** (Auth + Postgres + RLS). No Railway / custom API. Offline-first; backend is optional cloud backup. Phase: **Pre-Launch Integration Testing**.
-> See [`SUPABASE_BACKEND_PLAN.md`](./SUPABASE_BACKEND_PLAN.md) and [`../supabase/schema.sql`](../supabase/schema.sql).
+> **Status:** Backend = **Supabase Free only** (Auth + Postgres + RLS). Offline-first; backend is optional cloud backup. Phase: **Beta Readiness / Pre-Launch Testing**.
 
-## Phase 7 Backend Readiness (complete)
-- [x] `supabase/schema.sql` written (tables + per-user RLS, default deny)
-- [x] `mobile/.env.example` documents `EXPO_PUBLIC_SUPABASE_URL`, `EXPO_PUBLIC_SUPABASE_ANON_KEY`, `EXPO_PUBLIC_APP_ENV`, `EXPO_PUBLIC_DATA_PACK_BASE_URL`
-- [x] `supabase.ts` / `authService.ts` / `syncService.ts` / `sync-status.tsx` created
-- [x] App verified to boot + save data with NO env vars (offline-first)
-- [x] No service-role key in mobile app
-- [ ] Apply `schema.sql` to a Supabase project (run in Studio SQL editor)
-- [ ] Add real env vars to EAS build profiles before store submission
+## Phase 8 Beta Readiness
+- [ ] Confirm offline-first behavior with no Supabase env vars configured
+- [ ] Verify offline data persistence: trips, catches, emergency incidents, report drafts
+- [ ] Confirm location permission handling and Emergency Mode fallback
+- [ ] Confirm `mobile/app.json` includes iOS location usage descriptions and Android location permissions
+- [ ] Confirm `mobile/eas.json` production profile is valid for App Store / internal testing
+- [ ] Confirm `mobile/package.json` includes `typecheck` and `smoke-check` scripts
+- [ ] Run `yarn typecheck` or `npx tsc --noEmit` from `mobile/`
+- [ ] Run `yarn smoke-check` or `node mobile/scripts/smoke-check.mjs`
+- [ ] Confirm main screens render without crashes on iOS and Android
 
-[Document content - see details in workspace folder]
+## Documentation
+- [ ] Create `docs/BETA_TEST_PLAN.md`
+- [ ] Create `docs/QA_TEST_MATRIX.md`
+- [ ] Create `docs/APP_STORE_PREP.md`
+- [ ] Create `docs/PRIVACY_AND_SAFETY_NOTES.md`
+- [ ] Update `docs/KNOWN_LIMITATIONS.md` with current beta limitations
+- [ ] Keep `docs/BETA_ACCEPTANCE_CRITERIA.md` current with actual scope and deferred features
 
-This comprehensive 6-phase checklist covers:
-- Phase 1: Backend Integration & Configuration
-- Phase 2: Mobile App Testing
-- Phase 3: Web & Deployment
-- Phase 4: Pre-Launch Testing
-- Phase 5: App Store / Play Store Release
-- Phase 6: Post-Launch Monitoring
+## App Store / Release Prep
+- [ ] Confirm bundle identifier: `com.skylabcreativegroup.puremifishing`
+- [ ] Confirm app package name: `com.skylabcreativegroup.puremifishing`
+- [ ] Confirm version/build metadata is set for initial beta
+- [ ] Confirm screenshot and metadata preparation for TestFlight and Android internal track
+- [ ] Confirm support and privacy placeholders are documented and ready for replacement
 
-For the full document, open: docs/LAUNCH_CHECKLIST.md
+## Known Acceptable Beta Limitations
+- [ ] Regulation guidance remains sample/advisory only
+- [ ] Report photo attachment is deferred
+- [ ] Two-way sync and auth UI are deferred beyond beta
+- [ ] Offline map tile caching is deferred
+
+## Notes
+- The app currently supports optional Supabase backup with push-only sync.
+- The app should be stable and functional without network or backend configuration.
+- This checklist is the final validation before internal distribution.

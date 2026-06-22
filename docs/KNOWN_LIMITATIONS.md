@@ -156,3 +156,7 @@ Phase 7 added the backend but did **not** swap the weather/water service mocks f
 - Supabase access uses the **anon key only** + a signed-in session. **No service-role key** is shipped in the app.
 - Row Level Security isolates every user's rows (`auth.uid() = user_id`); default deny, no anonymous/public access.
 - All synced records are user-owned; no PII is shared across users.
+
+## Beta Metadata Notes
+- The current beta includes placeholder privacy policy and terms URLs in Expo `extra` values. These are documented for review but should be replaced with real public URLs before App Store / Play Store submission.
+- Support email is also a placeholder value and should be updated with a valid support address before production.

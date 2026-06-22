@@ -5,6 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "privacy": "public",
     "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -13,10 +14,19 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.skylabcreativegroup.puremifishing"
+      "bundleIdentifier": "com.skylabcreativegroup.puremifishing",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Pure MI Fishing uses your location to center maps, suggest nearby waterbodies, and record location for emergency mode."
+      }
     },
     "android": {
       "package": "com.skylabcreativegroup.puremifishing",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -33,6 +43,11 @@
       "expo-location",
       "expo-sqlite"
     ],
+    "extra": {
+      "privacyPolicyUrl": "https://example.com/privacy-policy",
+      "termsOfServiceUrl": "https://example.com/terms",
+      "supportEmail": "support@puremifishing.app"
+    },
     "scheme": "puremi"
   }
 }

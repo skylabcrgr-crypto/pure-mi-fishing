@@ -1,0 +1,60 @@
+import type { MapPin } from '../types';
+
+export const MAP_PINS: MapPin[] = [
+  {
+    id: 'pin-belle-isle',
+    title: 'Belle Isle Fishing Area',
+    type: 'access',
+    coordinates: { latitude: 42.3411, longitude: -82.9726 },
+    description: 'Shore fishing — perch, bass. State park pass required.',
+    waterbodyId: 'belle-isle',
+  },
+  {
+    id: 'pin-elizabeth-park',
+    title: 'Elizabeth Park Marina',
+    type: 'launch',
+    coordinates: { latitude: 42.1539, longitude: -83.1744 },
+    description: 'Two-lane ramp · trailer friendly · $10/day.',
+    waterbodyId: 'trenton-channel',
+  },
+  {
+    id: 'pin-wyandotte',
+    title: 'Wyandotte Boat Ramp',
+    type: 'launch',
+    coordinates: { latitude: 42.2142, longitude: -83.1490 },
+    description: 'Free city ramp · Detroit River main channel.',
+    waterbodyId: 'detroit-river',
+  },
+  {
+    id: 'pin-milliken',
+    title: 'Milliken State Park Harbor',
+    type: 'launch',
+    coordinates: { latitude: 42.3313, longitude: -83.0373 },
+    description: 'Modern marina · upper Detroit River. MI state park pass.',
+    waterbodyId: 'detroit-river',
+  },
+  {
+    id: 'pin-lake-erie-metro',
+    title: 'Lake Erie Metropark Launch',
+    type: 'launch',
+    coordinates: { latitude: 42.0417, longitude: -83.2028 },
+    description: 'Large multi-lane ramp · Metro park pass. Perch breakwall.',
+    waterbodyId: 'detroit-river',
+  },
+  {
+    id: 'pin-trenton-channel-hotspot',
+    title: 'Trenton Channel Walleye Hole',
+    type: 'hotspot',
+    coordinates: { latitude: 42.1350, longitude: -83.1800 },
+    description: 'Productive walleye structure along channel edge.',
+    waterbodyId: 'trenton-channel',
+  },
+  {
+    id: 'pin-detroit-river-shoreline',
+    title: 'Detroit River Shoreline Access',
+    type: 'access',
+    coordinates: { latitude: 42.3200, longitude: -83.0450 },
+    description: 'Public shoreline access · downtown Detroit riverfront.',
+    waterbodyId: 'detroit-river',
+  },
+];

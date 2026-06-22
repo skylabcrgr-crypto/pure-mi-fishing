@@ -1,0 +1,13 @@
+{
+  "name": "puremi-fishing",
+  "private": true,
+  "version": "0.1.0",
+  "description": "PureMI Fishing — Michigan angler companion app (monorepo)",
+  "scripts": {
+    "mobile": "cd mobile && npx expo start",
+    "mobile:ios": "cd mobile && npx expo run:ios",
+    "mobile:android": "cd mobile && npx expo run:android",
+    "landing": "cd landing && npm run dev",
+    "landing:build": "cd landing && npm run build"
+  }
+}

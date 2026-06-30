@@ -37,6 +37,6 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-# generated native folders
-/ios
+# generated native folders (Pods/ and build/ are excluded via ios/.gitignore)
+# /ios is tracked so Xcode Cloud can discover the project
 /android
